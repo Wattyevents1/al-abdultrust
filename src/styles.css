@@ -174,4 +174,21 @@
     color: transparent;
   }
   .container-narrow { max-width: 1200px; margin-inline: auto; padding-inline: 1.5rem; }
+  .container-wide { max-width: 1360px; margin-inline: auto; padding-inline: 1.5rem; }
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible { opacity: 1; transform: none; }
+  .rule-gold {
+    background: linear-gradient(90deg, var(--gold), transparent);
+    height: 1px;
+  }
+  .measure { max-width: 62ch; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
 }
