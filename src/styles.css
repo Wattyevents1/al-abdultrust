@@ -37,16 +37,16 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --font-display: "Lora", "Georgia", serif;
-  --font-sans: "Nunito Sans", system-ui, sans-serif;
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 
   --shadow-soft: 0 4px 20px -4px color-mix(in oklab, var(--primary) 15%, transparent);
   --shadow-glow: 0 10px 40px -10px color-mix(in oklab, var(--gold) 40%, transparent);
   --shadow-elegant: 0 20px 60px -20px color-mix(in oklab, var(--primary) 30%, transparent);
 
-  --gradient-hero: linear-gradient(135deg, #04372a 0%, #0d7a5f 100%);
-  --gradient-warm: linear-gradient(135deg, #0d7a5f 0%, #c9a84c 100%);
-  --gradient-overlay: linear-gradient(180deg, color-mix(in oklab, #064e3b 25%, transparent) 0%, color-mix(in oklab, #064e3b 90%, black) 100%);
+  --gradient-hero: linear-gradient(135deg, color-mix(in oklab, var(--primary) 92%, black) 0%, color-mix(in oklab, var(--primary) 70%, var(--warm)) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--warm) 0%, var(--gold) 100%);
+  --gradient-overlay: linear-gradient(180deg, color-mix(in oklab, var(--primary) 30%, transparent) 0%, color-mix(in oklab, var(--primary) 85%, black) 100%);
 
   --animate-fade-in: fade-in 0.6s ease-out;
   --animate-fade-up: fade-up 0.7s ease-out;
@@ -58,40 +58,40 @@
 
 :root {
   --radius: 0.875rem;
-  /* Al-Abdul Trust — Emerald Prestige: cream, emerald, deep forest, gold */
-  --background: #f5f0e0;
-  --foreground: #064e3b;
+  /* Al-Abdul Trust palette: navy blue, gold, green, red, white */
+  --background: oklch(0.99 0.005 80);
+  --foreground: oklch(0.22 0.07 260);
 
-  --card: #fdfbf4;
-  --card-foreground: #064e3b;
-  --popover: #fdfbf4;
-  --popover-foreground: #064e3b;
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.07 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.07 260);
 
-  --primary: #064e3b;                        /* deep forest */
-  --primary-foreground: #f5f0e0;
-  --primary-glow: #0d7a5f;
+  --primary: oklch(0.30 0.16 265);          /* logo navy blue */
+  --primary-foreground: oklch(0.98 0.01 80);
+  --primary-glow: oklch(0.50 0.18 265);
 
-  --secondary: #ece5d0;
-  --secondary-foreground: #064e3b;
+  --secondary: oklch(0.96 0.02 80);
+  --secondary-foreground: oklch(0.30 0.16 265);
 
-  --muted: #eae3cf;
-  --muted-foreground: #4a6157;
+  --muted: oklch(0.96 0.015 90);
+  --muted-foreground: oklch(0.5 0.04 260);
 
-  --accent: #0d7a5f;                         /* emerald */
-  --accent-foreground: #f7fdfa;
+  --accent: oklch(0.55 0.13 155);            /* logo green */
+  --accent-foreground: oklch(0.99 0.01 155);
 
-  --gold: #c9a84c;
-  --gold-foreground: #1d2b1f;
+  --gold: oklch(0.76 0.15 75);              /* logo gold */
+  --gold-foreground: oklch(0.22 0.07 260);
 
-  --warm: #0d7a5f;                           /* emerald replaces orange */
-  --warm-foreground: #f7fdfa;
+  --warm: oklch(0.70 0.18 45);              /* warm orange */
+  --warm-foreground: oklch(1 0 0);
 
-  --destructive: #a8432f;
-  --destructive-foreground: #fdf7f2;
+  --destructive: oklch(0.58 0.23 27);        /* logo red */
+  --destructive-foreground: oklch(0.98 0 0);
 
-  --border: #ddd3ba;
-  --input: #ddd3ba;
-  --ring: #0d7a5f;
+  --border: oklch(0.9 0.02 260);
+  --input: oklch(0.92 0.02 260);
+  --ring: oklch(0.50 0.18 265);
 }
 
 .dark {
@@ -174,21 +174,4 @@
     color: transparent;
   }
   .container-narrow { max-width: 1200px; margin-inline: auto; padding-inline: 1.5rem; }
-  .container-wide { max-width: 1360px; margin-inline: auto; padding-inline: 1.5rem; }
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: opacity, transform;
-  }
-  .reveal.is-visible { opacity: 1; transform: none; }
-  .rule-gold {
-    background: linear-gradient(90deg, var(--gold), transparent);
-    height: 1px;
-  }
-  .measure { max-width: 62ch; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
 }

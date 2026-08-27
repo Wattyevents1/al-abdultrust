@@ -30,56 +30,54 @@ export function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass border-b border-gold/25 py-2 shadow-[0_8px_30px_-24px_rgba(6,78,59,0.6)]" : "py-5"
+        scrolled ? "glass border-b border-border/50 py-2" : "py-4"
       }`}
     >
-      <div className="container-wide flex items-center justify-between gap-4">
+      <div className="container-narrow flex items-center justify-between">
         <Logo />
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-1">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              className="relative py-2 text-[11px] font-extrabold uppercase tracking-[0.16em] text-foreground/70 transition-colors hover:text-accent after:absolute after:inset-x-0 after:-bottom-0.5 after:h-[2px] after:origin-left after:scale-x-0 after:bg-gold after:transition-transform after:duration-300 hover:after:scale-x-100"
-              activeProps={{ className: "text-accent after:scale-x-100" }}
+              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-md"
+              activeProps={{ className: "text-primary" }}
             >
               {item.label}
             </Link>
           ))}
         </nav>
-        <div className="hidden lg:flex items-center gap-3">
-          <Button
-            asChild
-            size="sm"
-            className="rounded-full bg-accent px-6 text-[11px] font-extrabold uppercase tracking-[0.16em] text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:bg-primary hover:shadow-xl active:scale-[0.97]"
-          >
-            <Link to="/causes">Donate</Link>
+        <div className="hidden lg:flex items-center gap-2">
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/volunteer">Volunteer</Link>
+          </Button>
+          <Button asChild size="sm" className="rounded-full px-5" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>
+            <Link to="/causes">Donate Now</Link>
           </Button>
         </div>
         <button
-          className="lg:hidden grid h-11 w-11 place-items-center rounded-full border border-gold/40 text-foreground"
+          className="lg:hidden p-2 text-foreground"
           onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
+          aria-label="Toggle menu"
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
       {open && (
-        <div className="lg:hidden glass border-t border-gold/25 mt-3">
-          <div className="container-wide py-5 flex flex-col gap-1">
+        <div className="lg:hidden glass border-t border-border/50 mt-2">
+          <div className="container-narrow py-4 flex flex-col gap-1">
             {nav.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-[0.12em] transition-colors hover:bg-secondary"
+                className="px-3 py-2 text-sm font-medium hover:bg-muted rounded-md"
               >
                 {item.label}
               </Link>
             ))}
-            <Button asChild className="mt-3 h-12 rounded-full bg-accent text-accent-foreground hover:bg-primary">
+            <Button asChild className="mt-3 rounded-full" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>
               <Link to="/causes" onClick={() => setOpen(false)}>Donate Now</Link>
             </Button>
           </div>
