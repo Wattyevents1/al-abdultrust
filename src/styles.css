@@ -37,8 +37,8 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --font-display: "Playfair Display", "Georgia", serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-sans: "Figtree", system-ui, sans-serif;
 
   --shadow-soft: 0 4px 20px -4px color-mix(in oklab, var(--primary) 15%, transparent);
   --shadow-glow: 0 10px 40px -10px color-mix(in oklab, var(--gold) 40%, transparent);
