@@ -57,41 +57,43 @@
 }
 
 :root {
-  --radius: 0.875rem;
-  /* Al-Abdul Trust palette: navy blue, gold, green, red, white */
-  --background: oklch(0.99 0.005 80);
-  --foreground: oklch(0.22 0.07 260);
+  --radius: 1.25rem;
+  /* Earthy editorial palette: cream, forest green, warm clay, ink */
+  --background: #faf6ee;
+  --foreground: #22201c;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.07 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.07 260);
+  --card: #ffffff;
+  --card-foreground: #22201c;
+  --popover: #ffffff;
+  --popover-foreground: #22201c;
 
-  --primary: oklch(0.30 0.16 265);          /* logo navy blue */
-  --primary-foreground: oklch(0.98 0.01 80);
-  --primary-glow: oklch(0.50 0.18 265);
+  --primary: #3f5d45;                        /* forest green */
+  --primary-foreground: #faf6ee;
+  --primary-glow: #5c7f63;
 
-  --secondary: oklch(0.96 0.02 80);
-  --secondary-foreground: oklch(0.30 0.16 265);
+  --secondary: #f1ead9;
+  --secondary-foreground: #3f5d45;
 
-  --muted: oklch(0.96 0.015 90);
-  --muted-foreground: oklch(0.5 0.04 260);
+  --muted: #f1ead9;
+  --muted-foreground: #6f6a5d;
 
-  --accent: oklch(0.55 0.13 155);            /* logo green */
-  --accent-foreground: oklch(0.99 0.01 155);
+  --accent: #c2683f;                         /* warm clay */
+  --accent-foreground: #faf6ee;
 
-  --gold: oklch(0.76 0.15 75);              /* logo gold */
-  --gold-foreground: oklch(0.22 0.07 260);
+  --gold: #d8a45c;                           /* soft sand gold */
+  --gold-foreground: #22201c;
 
-  --warm: oklch(0.70 0.18 45);              /* warm orange */
-  --warm-foreground: oklch(1 0 0);
+  --warm: #c2683f;                           /* warm clay */
+  --warm-foreground: #faf6ee;
 
-  --destructive: oklch(0.58 0.23 27);        /* logo red */
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive: #b3452f;
+  --destructive-foreground: #faf6ee;
 
-  --border: oklch(0.9 0.02 260);
-  --input: oklch(0.92 0.02 260);
-  --ring: oklch(0.50 0.18 265);
+  --border: #e5dbc8;
+  --input: #e5dbc8;
+  --ring: #3f5d45;
+
+  --ink: #22201c;
 }
 
 .dark {
