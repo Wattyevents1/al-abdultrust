@@ -6,6 +6,14 @@ import women from "@/assets/cause-women.jpg";
 import community from "@/assets/cause-community.jpg";
 import orphan from "@/assets/cause-orphan.jpg";
 import relief from "@/assets/cause-relief.jpg";
+import masjid0 from "@/assets/masjid-0.jpg.asset.json";
+import masjid1 from "@/assets/masjid-1.jpg.asset.json";
+import masjid2 from "@/assets/masjid-2.jpg.asset.json";
+import masjid4 from "@/assets/masjid-4.jpg.asset.json";
+import masjid5 from "@/assets/masjid-5.jpg.asset.json";
+
+const masjidMain = masjid4.url;
+const masjidGallery = [masjid5.url, masjid0.url, masjid1.url, masjid2.url];
 
 export type Cause = {
   slug: string;
@@ -110,7 +118,7 @@ export const causes: Cause[] = [
     title: "Construction & Rehabilitation of Mosques",
     category: "Mosques",
     description: "We build new masjids and restore damaged ones in villages that have no proper place of worship. Each project includes a prayer hall, ablution facilities, a minaret and often an attached madrasa for Qur'an classes. Building a mosque is an ongoing sadaqah jariyah, you continue to receive reward for every prayer, dhikr and lesson held within its walls long after it is complete.",
-    image: community,
+    image: masjidMain,
     raised: 64200,
     goal: 110000,
     highlights: [
@@ -124,7 +132,7 @@ export const causes: Cause[] = [
       { q: "Are mosques named after donors?", a: "Yes, donors funding a complete masjid may dedicate it to themselves or a loved one." },
       { q: "Do you also restore old mosques?", a: "Yes. Restoring an existing masjid is often faster and reaches communities sooner than a new build." },
     ],
-    gallery: [community, education, water, orphan],
+    gallery: masjidGallery,
   },
   {
     slug: "orphanage-construction",
