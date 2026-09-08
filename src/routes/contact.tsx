@@ -42,7 +42,7 @@ function Contact() {
               { icon: MessageCircle, title: "WhatsApp", text: "Chat with us anytime" },
             ].map(c => (
               <Card key={c.title} className="p-5 flex items-start gap-4">
-                <div className="h-10 w-10 rounded-xl flex items-center justify-center text-white shrink-0" style={{ background: "var(--gradient-warm)" }}>
+                <div className="h-10 w-10 rounded-xl flex items-center justify-center text-white shrink-0" style={{ background: "var(--warm)" }}>
                   <c.icon className="h-5 w-5" />
                 </div>
                 <div>
@@ -62,7 +62,7 @@ function Contact() {
               </div>
               <div><Label>Subject</Label><Input required className="mt-1" /></div>
               <div><Label>Message</Label><Textarea required rows={6} className="mt-1" /></div>
-              <Button type="submit" className="w-fit rounded-full px-8 h-11" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>Send message</Button>
+              <Button type="submit" className="w-fit rounded-full px-8 h-11" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>Send message</Button>
             </form>
           </Card>
         </div>

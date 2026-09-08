@@ -2,7 +2,7 @@ export function PageHero({ eyebrow, title, subtitle }: { eyebrow?: string; title
   return (
     <section
       className="relative overflow-hidden py-20 md:py-28"
-      style={{ background: "var(--gradient-hero)" }}
+      style={{ background: "var(--primary)" }}
     >
       <div className="absolute inset-0 opacity-20" style={{
         backgroundImage: "radial-gradient(circle at 20% 30%, var(--gold) 0%, transparent 40%), radial-gradient(circle at 80% 70%, var(--warm) 0%, transparent 40%)"

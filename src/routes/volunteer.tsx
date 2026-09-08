@@ -63,7 +63,7 @@ function VolunteerPage() {
                 </div>
               </div>
               <div><Label>Why do you want to volunteer?</Label><Textarea rows={4} className="mt-1" /></div>
-              <Button type="submit" className="w-full h-11 rounded-full" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>Submit application</Button>
+              <Button type="submit" className="w-full h-11 rounded-full" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>Submit application</Button>
             </form>
           </Card>
 

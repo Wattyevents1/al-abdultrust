@@ -63,7 +63,7 @@ function Legal() {
 
           <Card className="p-8 border-l-4" style={{ borderLeftColor: "var(--gold)" }}>
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-10 w-10 rounded-xl flex items-center justify-center text-white" style={{ background: "var(--gradient-warm)" }}>
+              <div className="h-10 w-10 rounded-xl flex items-center justify-center text-white" style={{ background: "var(--warm)" }}>
                 <FileText className="h-5 w-5" />
               </div>
               <h3 className="font-display text-xl font-bold text-primary">Registration details</h3>
@@ -98,7 +98,7 @@ function Legal() {
 
       <section className="py-20">
         <div className="container-narrow max-w-3xl text-center">
-          <div className="inline-flex items-center justify-center h-14 w-14 rounded-full mb-6" style={{ background: "var(--gradient-warm)" }}>
+          <div className="inline-flex items-center justify-center h-14 w-14 rounded-full mb-6" style={{ background: "var(--warm)" }}>
             <Scale className="h-7 w-7 text-white" />
           </div>
           <h2 className="text-3xl font-bold text-primary mb-4">Questions about our legal status?</h2>
@@ -108,7 +108,7 @@ function Legal() {
           <a
             href="mailto:alabdultrustcharityorg@gmail.com"
             className="inline-flex items-center justify-center rounded-full px-8 h-11 text-sm font-medium transition-colors"
-            style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}
+            style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}
           >
             Contact us
           </a>

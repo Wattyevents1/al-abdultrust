@@ -111,7 +111,7 @@ function CausesPage() {
               <p className="mt-3 text-xs text-muted-foreground">
                 {currency} {amount} {recurring ? "/ month" : ""} · provides {Math.round(amount / 5)} meals or {Math.round(amount / 25)} school days.
               </p>
-              <Button type="submit" disabled={submitting} className="mt-5 w-full rounded-full h-12 text-base shadow-[var(--shadow-glow)]" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>
+              <Button type="submit" disabled={submitting} className="mt-5 w-full rounded-full h-12 text-base shadow-[var(--shadow-glow)]" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>
                 {submitting ? "Redirecting to Pesapal…" : `Donate ${currency} ${amount}${recurring ? "/mo" : ""}`}
               </Button>
               <div className="mt-4 grid grid-cols-3 gap-2 text-[11px] text-center text-muted-foreground">
@@ -146,7 +146,7 @@ function CausesPage() {
                       <Button asChild variant="outline" className="rounded-full">
                         <Link to="/causes/$slug" params={{ slug: c.slug }}>Learn more</Link>
                       </Button>
-                      <Button asChild className="rounded-full" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>
+                      <Button asChild className="rounded-full" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>
                         <Link to="/causes">Donate</Link>
                       </Button>
                     </div>

@@ -52,7 +52,7 @@ export function Header() {
           <Button asChild variant="ghost" size="sm">
             <Link to="/volunteer">Volunteer</Link>
           </Button>
-          <Button asChild size="sm" className="rounded-full px-5" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>
+          <Button asChild size="sm" className="rounded-full px-5" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>
             <Link to="/causes">Donate Now</Link>
           </Button>
         </div>
@@ -77,7 +77,7 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Button asChild className="mt-3 rounded-full" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>
+            <Button asChild className="mt-3 rounded-full" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>
               <Link to="/causes" onClick={() => setOpen(false)}>Donate Now</Link>
             </Button>
           </div>

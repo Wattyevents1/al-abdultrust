@@ -72,7 +72,7 @@ function About() {
           <div className="mt-12 grid md:grid-cols-4 gap-6">
             {values.map(v => (
               <Card key={v.title} className="p-7 text-center hover:shadow-[var(--shadow-soft)] transition">
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl text-white" style={{ background: "var(--gradient-warm)" }}>
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl text-white" style={{ background: "var(--warm)" }}>
                   <v.icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-primary">{v.title}</h3>
@@ -85,7 +85,7 @@ function About() {
 
       <section className="py-24">
         <div className="container-narrow grid md:grid-cols-3 gap-10 items-center">
-          <div className="aspect-square rounded-3xl overflow-hidden shadow-[var(--shadow-elegant)]" style={{ background: "var(--gradient-warm)" }}>
+          <div className="aspect-square rounded-3xl overflow-hidden shadow-[var(--shadow-elegant)]" style={{ background: "var(--warm)" }}>
             <div className="h-full w-full grid place-items-center text-white font-display text-7xl">MR</div>
           </div>
           <div className="md:col-span-2">
@@ -105,7 +105,7 @@ function About() {
           <div className="mt-12 grid sm:grid-cols-2 md:grid-cols-4 gap-6">
             {team.map(m => (
               <Card key={m.name} className="overflow-hidden p-0 group">
-                <div className="aspect-square" style={{ background: `linear-gradient(135deg, var(--primary), var(--warm))` }}>
+                <div className="aspect-square" style={{ background: "var(--primary)" }}>
                   <div className="h-full w-full grid place-items-center text-white font-display text-4xl opacity-80">{m.name.split(" ").map(s=>s[0]).slice(0,2).join("")}</div>
                 </div>
                 <div className="p-5 text-center">

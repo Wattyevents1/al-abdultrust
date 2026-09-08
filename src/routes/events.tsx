@@ -66,7 +66,7 @@ function EventsPage() {
                 <div className="flex items-center gap-2 text-muted-foreground col-span-2"><MapPin className="h-4 w-4 text-warm" />{e.city}</div>
               </div>
               <div className="mt-5"><Countdown iso={e.date} /></div>
-              <Button className="mt-5 w-full rounded-full" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>Register</Button>
+              <Button className="mt-5 w-full rounded-full" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>Register</Button>
             </Card>
           ))}
         </div>
