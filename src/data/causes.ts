@@ -118,7 +118,7 @@ export const causes: Cause[] = [
     title: "Construction & Rehabilitation of Mosques",
     category: "Mosques",
     description: "We build new masjids and restore damaged ones in villages that have no proper place of worship. Each project includes a prayer hall, ablution facilities, a minaret and often an attached madrasa for Qur'an classes. Building a mosque is an ongoing sadaqah jariyah, you continue to receive reward for every prayer, dhikr and lesson held within its walls long after it is complete.",
-    image: community,
+    image: masjidMain,
     raised: 64200,
     goal: 110000,
     highlights: [
