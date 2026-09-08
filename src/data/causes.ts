@@ -6,6 +6,14 @@ import women from "@/assets/cause-women.jpg";
 import community from "@/assets/cause-community.jpg";
 import orphan from "@/assets/cause-orphan.jpg";
 import relief from "@/assets/cause-relief.jpg";
+import masjid0 from "@/assets/masjid-0.jpg.asset.json";
+import masjid1 from "@/assets/masjid-1.jpg.asset.json";
+import masjid2 from "@/assets/masjid-2.jpg.asset.json";
+import masjid4 from "@/assets/masjid-4.jpg.asset.json";
+import masjid5 from "@/assets/masjid-5.jpg.asset.json";
+
+const masjidMain = masjid4.url;
+const masjidGallery = [masjid5.url, masjid0.url, masjid1.url, masjid2.url];
 
 export type Cause = {
   slug: string;
