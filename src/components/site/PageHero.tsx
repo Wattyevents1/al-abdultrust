@@ -4,9 +4,8 @@ export function PageHero({ eyebrow, title, subtitle }: { eyebrow?: string; title
       className="relative overflow-hidden py-20 md:py-28"
       style={{ background: "var(--primary)" }}
     >
-      <div className="absolute inset-0 opacity-20" style={{
-        backgroundImage: "radial-gradient(circle at 20% 30%, var(--gold) 0%, transparent 40%), radial-gradient(circle at 80% 70%, var(--warm) 0%, transparent 40%)"
-      }} />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-white/15" />
+
       <div className="container-narrow relative text-center text-white" style={{ animation: "var(--animate-fade-up)" }}>
         {eyebrow && <p className="text-sm uppercase tracking-[0.3em] text-gold mb-4">{eyebrow}</p>}
         <h1 className="text-4xl md:text-6xl font-bold mb-4">{title}</h1>
