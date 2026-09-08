@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Al-Abdul Trust CHARITY ORGANISATION — Serving Humanity in Uganda" },
+      { title: "Al-Abdul Trust CHARITY ORGANISATION | Serving Humanity in Uganda" },
       { name: "description", content: "Al-Abdul Trust is a registered Ugandan charity building water wells, orphanages and schools, and feeding families in need. Donate or volunteer today." },
       { property: "og:title", content: "Al-Abdul Trust CHARITY ORGANISATION" },
       { property: "og:description", content: "Water wells, orphan care, schools and food relief across Uganda. Serving humanity, together." },
@@ -34,7 +34,7 @@ const stories = [
     slug: "water-wells",
     eyebrow: "Safe water access",
     title: ["Deep wells,", "brighter futures."],
-    body: "Our boreholes bring clean water straight into the heart of a village — cutting waterborne illness, easing the daily burden on mothers, and freeing girls to sit in a classroom instead of walking for miles.",
+    body: "Our boreholes bring clean water straight into the heart of a village, cutting waterborne illness, easing the daily burden on mothers, and freeing girls to sit in a classroom instead of walking for miles.",
     cta: "Explore water projects",
   },
   {
@@ -48,14 +48,14 @@ const stories = [
     slug: "school-construction",
     eyebrow: "Education",
     title: ["Classrooms built", "to last generations."],
-    body: "We build and rehabilitate schools with proper roofing, desks, latrines and safe water points — then work with local teachers so the building keeps serving long after the ribbon is cut.",
+    body: "We build and rehabilitate schools with proper roofing, desks, latrines and safe water points, then work with local teachers so the building keeps serving long after the ribbon is cut.",
     cta: "See our schools",
   },
   {
     slug: "food-provision",
     eyebrow: "Food & urgent appeals",
     title: ["A full plate,", "restored dignity."],
-    body: "From monthly family food parcels to emergency response after floods and drought, we deliver food where it is needed most — quietly, respectfully, and directly into the hands of families.",
+    body: "From monthly family food parcels to emergency response after floods and drought, we deliver food where it is needed most, quietly, respectfully, and directly into the hands of families.",
     cta: "Support food relief",
   },
 ] as const;
@@ -86,7 +86,7 @@ function HomePage() {
                 <br className="hidden sm:block" /> in Uganda.
               </h1>
               <p className="mt-8 max-w-xl text-lg sm:text-xl lg:text-2xl leading-relaxed text-foreground/75">
-                Al-Abdul Trust is a Ugandan charity dedicated to sustainable relief — clean water, orphan care, schools and food for families who need it most.
+                Al-Abdul Trust is a Ugandan charity dedicated to sustainable relief, clean water, orphan care, schools and food for families who need it most.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Button asChild size="lg" className="h-14 rounded-full bg-primary px-9 text-base font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 hover:bg-primary/90">

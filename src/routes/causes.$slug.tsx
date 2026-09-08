@@ -15,7 +15,7 @@ export const Route = createFileRoute("/causes/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.cause.title} — Al-Abdul Trust Charity Organisation` },
+          { title: `${loaderData.cause.title} | Al-Abdul Trust Charity Organisation` },
           { name: "description", content: loaderData.cause.description.slice(0, 160) },
           { property: "og:title", content: loaderData.cause.title },
           { property: "og:description", content: loaderData.cause.description.slice(0, 160) },
@@ -57,7 +57,7 @@ function CauseDetailPage() {
       {/* Hero */}
       <section className="relative -mt-20 pt-32 pb-16 overflow-hidden">
         <img src={cause.image} alt={cause.title} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/85" />
+        <div className="absolute inset-0 bg-primary/80" />
         <div className="relative container-narrow text-white">
           <Link to="/causes" className="inline-flex items-center gap-2 text-sm opacity-90 hover:opacity-100">
             <ArrowLeft className="h-4 w-4" /> All projects
@@ -68,7 +68,7 @@ function CauseDetailPage() {
           <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold leading-tight">{cause.title}</h1>
           <p className="mt-5 max-w-3xl text-white/90 text-lg leading-relaxed">{cause.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild className="rounded-full h-12 px-7 text-base shadow-[var(--shadow-glow)]" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>
+            <Button asChild className="rounded-full h-12 px-7 text-base shadow-[var(--shadow-glow)]" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>
               <Link to="/causes">
                 <Heart className="h-4 w-4 mr-2" /> Donate to this project
               </Link>

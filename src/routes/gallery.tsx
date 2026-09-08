@@ -16,7 +16,7 @@ import f9 from "@/assets/hero-children.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Al-Abdul Trust Charity Organisation" },
+      { title: "Gallery | Al-Abdul Trust Charity Organisation" },
       { name: "description", content: "Photos and stories from our programs across Africa." },
       { property: "og:title", content: "Al-Abdul Trust Gallery" },
       { property: "og:description", content: "See the impact, in pictures." },
@@ -31,7 +31,7 @@ function Gallery() {
   const [open, setOpen] = useState<string | null>(null);
   return (
     <SiteLayout>
-      <PageHero eyebrow="Moments of impact" title="Gallery" subtitle="A look inside our work — the smiles, the labor, the love." />
+      <PageHero eyebrow="Moments of impact" title="Gallery" subtitle="A look inside our work, the smiles, the labor, the love." />
       <section className="py-20">
         <div className="container-narrow">
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4 [&>*]:mb-4">

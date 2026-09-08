@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "Events — Al-Abdul Trust Charity Organisation" },
+      { title: "Events | Al-Abdul Trust Charity Organisation" },
       { name: "description", content: "Charity galas, fundraisers, awareness walks and community days you can join." },
       { property: "og:title", content: "Al-Abdul Trust Events" },
       { property: "og:description", content: "Find an event near you." },
@@ -66,7 +66,7 @@ function EventsPage() {
                 <div className="flex items-center gap-2 text-muted-foreground col-span-2"><MapPin className="h-4 w-4 text-warm" />{e.city}</div>
               </div>
               <div className="mt-5"><Countdown iso={e.date} /></div>
-              <Button className="mt-5 w-full rounded-full" style={{ background: "var(--gradient-warm)", color: "var(--warm-foreground)" }}>Register</Button>
+              <Button className="mt-5 w-full rounded-full" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>Register</Button>
             </Card>
           ))}
         </div>

@@ -15,7 +15,7 @@ export const Route = createFileRoute("/admin")({
   component: AdminPage,
   head: () => ({
     meta: [
-      { title: "Admin — Al-Abdul Trust" },
+      { title: "Admin | Al-Abdul Trust" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -101,10 +101,10 @@ function AdminPage() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <StatCard icon={<DollarSign className="h-5 w-5" />} label="Total raised" value={totals ? `$${totals.raised.toLocaleString(undefined, { maximumFractionDigits: 2 })}` : "—"} />
-          <StatCard icon={<CheckCircle2 className="h-5 w-5 text-emerald-600" />} label="Completed" value={totals?.completed ?? "—"} />
-          <StatCard icon={<Clock className="h-5 w-5 text-warm" />} label="Pending" value={totals?.pending ?? "—"} />
-          <StatCard icon={<XCircle className="h-5 w-5 text-destructive" />} label="Failed" value={totals?.failed ?? "—"} />
+          <StatCard icon={<DollarSign className="h-5 w-5" />} label="Total raised" value={totals ? `$${totals.raised.toLocaleString(undefined, { maximumFractionDigits: 2 })}` : ","} />
+          <StatCard icon={<CheckCircle2 className="h-5 w-5 text-emerald-600" />} label="Completed" value={totals?.completed ?? ","} />
+          <StatCard icon={<Clock className="h-5 w-5 text-warm" />} label="Pending" value={totals?.pending ?? ","} />
+          <StatCard icon={<XCircle className="h-5 w-5 text-destructive" />} label="Failed" value={totals?.failed ?? ","} />
         </div>
 
         <Card className="overflow-hidden p-0">
@@ -148,8 +148,8 @@ function AdminPage() {
                       {d.currency} {Number(d.amount).toLocaleString()}
                       {d.recurring && <span className="ml-1 text-xs text-warm">/mo</span>}
                     </td>
-                    <td className="px-4 py-3 text-xs">{d.cause_slug || "—"}</td>
-                    <td className="px-4 py-3 text-xs">{d.payment_method || "—"}</td>
+                    <td className="px-4 py-3 text-xs">{d.cause_slug || ","}</td>
+                    <td className="px-4 py-3 text-xs">{d.payment_method || ","}</td>
                     <td className="px-4 py-3"><StatusBadge status={d.status} /></td>
                     <td className="px-4 py-3 font-mono text-[11px] text-muted-foreground">{d.merchant_reference}</td>
                   </tr>

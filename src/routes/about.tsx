@@ -8,7 +8,7 @@ import { Compass, Eye, Heart, Award, Linkedin, Twitter } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Al-Abdul Trust CHARITY ORGANISATION" },
+      { title: "About | Al-Abdul Trust CHARITY ORGANISATION" },
       { name: "description", content: "Our story, mission and the people behind Al-Abdul Trust CHARITY ORGANISATION." },
       { property: "og:title", content: "About Al-Abdul Trust CHARITY ORGANISATION" },
       { property: "og:description", content: "A movement of service and trust since 2009." },
@@ -49,7 +49,7 @@ function About() {
           <div>
             <h2 className="text-4xl font-bold text-primary">From a single meal to a movement</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Al-Abdul Trust CHARITY ORGANISATION began with one mother handing out meals after school in a Kampala suburb. Five years later we operate in 2 countries — but our principle hasn't changed: meet people where they are, with what they need, and treat them like family.
+              Al-Abdul Trust CHARITY ORGANISATION began with one mother handing out meals after school in a Kampala suburb. Five years later we operate in 2 countries, but our principle hasn't changed: meet people where they are, with what they need, and treat them like family.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               We focus on six pillars: food security, education, healthcare, clean water, women's empowerment, and emergency relief. Every dollar is tracked. Every program is co-designed with the communities we serve.
@@ -72,7 +72,7 @@ function About() {
           <div className="mt-12 grid md:grid-cols-4 gap-6">
             {values.map(v => (
               <Card key={v.title} className="p-7 text-center hover:shadow-[var(--shadow-soft)] transition">
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl text-white" style={{ background: "var(--gradient-warm)" }}>
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl text-white" style={{ background: "var(--warm)" }}>
                   <v.icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-primary">{v.title}</h3>
@@ -85,16 +85,16 @@ function About() {
 
       <section className="py-24">
         <div className="container-narrow grid md:grid-cols-3 gap-10 items-center">
-          <div className="aspect-square rounded-3xl overflow-hidden shadow-[var(--shadow-elegant)]" style={{ background: "var(--gradient-warm)" }}>
+          <div className="aspect-square rounded-3xl overflow-hidden shadow-[var(--shadow-elegant)]" style={{ background: "var(--warm)" }}>
             <div className="h-full w-full grid place-items-center text-white font-display text-7xl">MR</div>
           </div>
           <div className="md:col-span-2">
             <p className="text-sm uppercase tracking-[0.25em] text-warm font-semibold">Founder's message</p>
             <h2 className="mt-2 text-4xl font-bold text-primary">"Service is the bridge between despair and possibility."</h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              When I started Al-Abdul Trust, I had no plan, no funding — just a refusal to look away. Today, when I see a child confidently reading her first book or a mother starting her own business, I'm reminded that change is built one person at a time. Thank you for walking with us.
+              When I started Al-Abdul Trust, I had no plan, no funding, just a refusal to look away. Today, when I see a child confidently reading her first book or a mother starting her own business, I'm reminded that change is built one person at a time. Thank you for walking with us.
             </p>
-            <p className="mt-4 font-display text-lg text-primary">— Mr Madaba, Founder &amp; CEO</p>
+            <p className="mt-4 font-display text-lg text-primary">Mr Madaba, Founder &amp; CEO</p>
           </div>
         </div>
       </section>
@@ -105,7 +105,7 @@ function About() {
           <div className="mt-12 grid sm:grid-cols-2 md:grid-cols-4 gap-6">
             {team.map(m => (
               <Card key={m.name} className="overflow-hidden p-0 group">
-                <div className="aspect-square" style={{ background: `linear-gradient(135deg, var(--primary), var(--warm))` }}>
+                <div className="aspect-square" style={{ background: "var(--primary)" }}>
                   <div className="h-full w-full grid place-items-center text-white font-display text-4xl opacity-80">{m.name.split(" ").map(s=>s[0]).slice(0,2).join("")}</div>
                 </div>
                 <div className="p-5 text-center">

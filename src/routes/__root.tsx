@@ -73,15 +73,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Al-Abdul Trust CHARITY ORGANISATION — Changing Lives Through Service" },
+      { title: "Al-Abdul Trust CHARITY ORGANISATION | Changing Lives Through Service" },
       { name: "description", content: "Al-Abdul Trust CHARITY ORGANISATION is a humanitarian NGO bringing food, education, healthcare, clean water and hope to communities across Uganda." },
       { author: "Al-Abdul Trust CHARITY ORGANISATION" },
-      { property: "og:title", content: "Al-Abdul Trust CHARITY ORGANISATION — Changing Lives Through Service" },
+      { property: "og:title", content: "Al-Abdul Trust CHARITY ORGANISATION | Changing Lives Through Service" },
       { property: "og:description", content: "Al-Abdul Trust CHARITY ORGANISATION is a humanitarian NGO bringing food, education, healthcare, clean water and hope to communities across Uganda." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Al-Abdul Trust CHARITY ORGANISATION — Changing Lives Through Service" },
+      { name: "twitter:title", content: "Al-Abdul Trust CHARITY ORGANISATION | Changing Lives Through Service" },
       { name: "twitter:description", content: "Al-Abdul Trust CHARITY ORGANISATION is a humanitarian NGO bringing food, education, healthcare, clean water and hope to communities across Uganda." }
     ],
     links: [
