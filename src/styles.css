@@ -44,9 +44,8 @@
   --shadow-glow: 0 10px 40px -10px color-mix(in oklab, var(--gold) 40%, transparent);
   --shadow-elegant: 0 20px 60px -20px color-mix(in oklab, var(--primary) 30%, transparent);
 
-  --gradient-hero: linear-gradient(135deg, color-mix(in oklab, var(--primary) 92%, black) 0%, color-mix(in oklab, var(--primary) 70%, var(--warm)) 100%);
-  --gradient-warm: linear-gradient(135deg, var(--warm) 0%, var(--gold) 100%);
-  --gradient-overlay: linear-gradient(180deg, color-mix(in oklab, var(--primary) 30%, transparent) 0%, color-mix(in oklab, var(--primary) 85%, black) 100%);
+
+
 
   --animate-fade-in: fade-in 0.6s ease-out;
   --animate-fade-up: fade-up 0.7s ease-out;
