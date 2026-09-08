@@ -15,7 +15,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/volunteer")({
   head: () => ({
     meta: [
-      { title: "Volunteer — Al-Abdul Trust Charity Organisation" },
+      { title: "Volunteer | Al-Abdul Trust Charity Organisation" },
       { name: "description", content: "Join our global network of 6,200+ volunteers and help change lives across Africa." },
       { property: "og:title", content: "Volunteer with Al-Abdul Trust" },
       { property: "og:description", content: "Give your time. Change a life." },
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/volunteer")({
 const skills = ["Teaching", "Medical", "Engineering", "Marketing", "Tech / IT", "Translation", "Logistics", "Fundraising"];
 const faqs = [
   { q: "Do I need experience?", a: "Not at all. We have roles for every skill set and every level of experience." },
-  { q: "Can I volunteer remotely?", a: "Yes — many of our roles in design, translation, mentoring and fundraising are fully remote." },
+  { q: "Can I volunteer remotely?", a: "Yes, many of our roles in design, translation, mentoring and fundraising are fully remote." },
   { q: "Is there a minimum commitment?", a: "We ask for at least 4 hours per month so we can plan effectively, but flexibility is the norm." },
   { q: "Are travel costs covered?", a: "For field placements over 4 weeks we cover travel, accommodation and a daily stipend." },
 ];
@@ -71,7 +71,7 @@ function VolunteerPage() {
             <Card className="p-7 bg-secondary/30 border-warm/30">
               <Quote className="h-8 w-8 text-warm" />
               <p className="mt-3 text-lg text-foreground/90 italic">"Volunteering with Al-Abdul Trust was the most meaningful month of my life. I came to teach English; I left with a new family."</p>
-              <p className="mt-3 font-semibold text-primary">— Lucia, volunteer from Spain</p>
+              <p className="mt-3 font-semibold text-primary">Lucia, volunteer from Spain</p>
             </Card>
             <Card className="p-7">
               <h3 className="font-display text-xl font-bold text-primary mb-3">Frequently asked</h3>

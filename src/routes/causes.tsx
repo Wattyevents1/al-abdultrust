@@ -16,9 +16,9 @@ import { Label } from "@/components/ui/label";
 export const Route = createFileRoute("/causes")({
   head: () => ({
     meta: [
-      { title: "Projects & Donate — Al-Abdul Trust Charity Organisation" },
+      { title: "Projects & Donate | Al-Abdul Trust Charity Organisation" },
       { name: "description", content: "Explore our projects: water wells, orphan care, Ramadan iftar, Qurban, mosques, orphanages, schools, Qur'an distribution and urgent relief." },
-      { property: "og:title", content: "Our Projects — Al-Abdul Trust" },
+      { property: "og:title", content: "Our Projects | Al-Abdul Trust" },
       { property: "og:description", content: "Pick a project and make a difference today." },
     ],
   }),
@@ -64,7 +64,7 @@ function CausesPage() {
 
   return (
     <SiteLayout>
-      <PageHero eyebrow="Where help meets hope" title="Choose a project to support" subtitle="Every project below is explained in detail. 100% of every donation is tracked and reported — choose where your gift makes the biggest impact." />
+      <PageHero eyebrow="Where help meets hope" title="Choose a project to support" subtitle="Every project below is explained in detail. 100% of every donation is tracked and reported, choose where your gift makes the biggest impact." />
 
       <section className="py-20">
         <div className="container-narrow grid lg:grid-cols-3 gap-10">

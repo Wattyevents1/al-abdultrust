@@ -15,7 +15,7 @@ export const Route = createFileRoute("/causes/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.cause.title} — Al-Abdul Trust Charity Organisation` },
+          { title: `${loaderData.cause.title} | Al-Abdul Trust Charity Organisation` },
           { name: "description", content: loaderData.cause.description.slice(0, 160) },
           { property: "og:title", content: loaderData.cause.title },
           { property: "og:description", content: loaderData.cause.description.slice(0, 160) },

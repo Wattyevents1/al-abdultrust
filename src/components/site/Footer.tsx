@@ -60,7 +60,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-narrow py-6 flex flex-col md:flex-row gap-3 items-center justify-between text-xs text-primary-foreground/60">
-          <p>© {new Date().getFullYear()} Al-Abdul Trust CHARITY ORGANISATION — Serving Humanity. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Al-Abdul Trust CHARITY ORGANISATION | Serving Humanity. All rights reserved.</p>
           <p>Registered Charity Uganda • Reg. No. NCD/122/2026</p>
         </div>
       </div>

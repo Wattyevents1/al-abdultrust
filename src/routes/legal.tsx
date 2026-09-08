@@ -7,9 +7,9 @@ import { Shield, FileText, Scale, Globe, CheckCircle } from "lucide-react";
 export const Route = createFileRoute("/legal")({
   head: () => ({
     meta: [
-      { title: "Legal & Registration — Al-Abdul Trust CHARITY ORGANISATION" },
+      { title: "Legal & Registration | Al-Abdul Trust CHARITY ORGANISATION" },
       { name: "description", content: "Official registration and legal information for Al-Abdul Trust CHARITY ORGANISATION, a registered charity in Uganda." },
-      { property: "og:title", content: "Legal & Registration — Al-Abdul Trust CHARITY ORGANISATION" },
+      { property: "og:title", content: "Legal & Registration | Al-Abdul Trust CHARITY ORGANISATION" },
       { property: "og:description", content: "Official registration and legal information for Al-Abdul Trust CHARITY ORGANISATION, a registered charity in Uganda." },
       { property: "og:type", content: "website" },
     ],

@@ -18,7 +18,7 @@ export const Route = createFileRoute("/donate/callback")({
   component: CallbackPage,
   head: () => ({
     meta: [
-      { title: "Donation status — Al-Abdul Trust" },
+      { title: "Donation status | Al-Abdul Trust" },
       { name: "robots", content: "noindex" },
     ],
   }),
