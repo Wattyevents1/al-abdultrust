@@ -132,7 +132,7 @@ export const causes: Cause[] = [
       { q: "Are mosques named after donors?", a: "Yes, donors funding a complete masjid may dedicate it to themselves or a loved one." },
       { q: "Do you also restore old mosques?", a: "Yes. Restoring an existing masjid is often faster and reaches communities sooner than a new build." },
     ],
-    gallery: [community, education, water, orphan],
+    gallery: masjidGallery,
   },
   {
     slug: "orphanage-construction",
