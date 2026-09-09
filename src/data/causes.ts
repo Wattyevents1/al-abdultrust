@@ -1,4 +1,4 @@
-import { feedingPhotos, masjidPhotos, qurbanPhotos } from "@/data/photos";
+import { feedingPhotos, masjidPhotos, qurbanPhotos, waterPhotos } from "@/data/photos";
 
 const masjidMain = masjidPhotos[0];
 const masjidGallery = masjidPhotos.slice(1, 5);
