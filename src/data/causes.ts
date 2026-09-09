@@ -25,8 +25,9 @@ import qurban19 from "@/assets/qurban-19.jpg.asset.json";
 const masjidMain = masjid4.url;
 const masjidGallery = [masjid5.url, masjid0.url, masjid1.url, masjid2.url];
 
-const feedingImgs = [feed13, feed11, feed12, feed14, feed15].map((a) => a.url);
+const feedingImgs = [feed13, feed11.url, feed12, feed14, feed15];
 const qurbanImgs = [qurban16, qurban19, qurban17, qurban18].map((a) => a.url);
+
 
 export type Cause = {
   slug: string;
