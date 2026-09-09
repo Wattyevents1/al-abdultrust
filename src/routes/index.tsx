@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-children.jpg";
+import { feedingPhotos } from "@/data/photos";
+
+const heroImg = feedingPhotos[0];
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
