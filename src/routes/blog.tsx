@@ -5,12 +5,12 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Search, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { feedingPhotos, masjidPhotos, qurbanPhotos } from "@/data/photos";
+import { feedingPhotos, masjidPhotos, qurbanPhotos, waterPhotos } from "@/data/photos";
 
 const food = feedingPhotos[0];
 const edu = feedingPhotos[1];
 const med = feedingPhotos[2];
-const wat = masjidPhotos[0];
+const wat = waterPhotos[0];
 const wom = qurbanPhotos[0];
 const com = masjidPhotos[1];
 

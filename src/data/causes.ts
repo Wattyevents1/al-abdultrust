@@ -9,7 +9,7 @@ const qurbanImgs = qurbanPhotos;
 const food = feedingPhotos[0];
 const education = feedingPhotos[1];
 const medical = feedingPhotos[2];
-const water = masjidPhotos[5];
+const water = waterPhotos[0];
 const women = qurbanPhotos[1];
 const community = masjidPhotos[2];
 const orphan = feedingPhotos[3];
@@ -50,7 +50,7 @@ export const causes: Cause[] = [
       { q: "Can I dedicate a well to a loved one?", a: "Yes. Every well carries a plaque with the donor's chosen name or that of a loved one, and we email you photos and GPS coordinates on completion." },
       { q: "Who maintains the well afterwards?", a: "We train a local water committee and provide spare parts and tools so the community owns and maintains the well long-term." },
     ],
-    gallery: [water, community, education, relief],
+    gallery: waterPhotos,
   },
   {
     slug: "orphan-care",
