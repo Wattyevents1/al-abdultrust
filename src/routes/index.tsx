@@ -26,9 +26,9 @@ export const Route = createFileRoute("/")({
 
 const stats = [
   { label: "Children supported", value: 1200, suffix: "+" },
-  { label: "Meals distributed", value: 300000, suffix: "+" },
-  { label: "Communities reached", value: 180, suffix: "" },
-  { label: "Active volunteers", value: 40, suffix: "" },
+  { label: "Meals distributed", value: 30000, suffix: "+" },
+  { label: "Communities reached", value: 100, suffix: "+" },
+  { label: "Active volunteers", value: 40, suffix: "+" },
 ];
 
 const stories = [
