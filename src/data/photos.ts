@@ -24,8 +24,10 @@ export const waterPhotos = [water20.url, water07.url, water21.url, water08.url];
 
 export const masjidPhotos = [
   masjid4.url,
+  masjidN1.url,
   masjid5.url,
   masjid0.url,
+  masjidN2.url,
   masjid1.url,
   masjid2.url,
   masjid3.url,
