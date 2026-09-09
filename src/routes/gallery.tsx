@@ -3,15 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { useState } from "react";
 import { X } from "lucide-react";
-import f1 from "@/assets/cause-food.jpg";
-import f2 from "@/assets/cause-education.jpg";
-import f3 from "@/assets/cause-medical.jpg";
-import f4 from "@/assets/cause-water.jpg";
-import f5 from "@/assets/cause-women.jpg";
-import f6 from "@/assets/cause-community.jpg";
-import f7 from "@/assets/cause-orphan.jpg";
-import f8 from "@/assets/cause-relief.jpg";
-import f9 from "@/assets/hero-children.jpg";
+import { allPhotos } from "@/data/photos";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -25,7 +17,7 @@ export const Route = createFileRoute("/gallery")({
   component: Gallery,
 });
 
-const photos = [f9, f1, f2, f3, f4, f5, f6, f7, f8, f9, f2, f4];
+const photos = allPhotos;
 
 function Gallery() {
   const [open, setOpen] = useState<string | null>(null);

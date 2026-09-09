@@ -5,12 +5,14 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Search, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import food from "@/assets/cause-food.jpg";
-import edu from "@/assets/cause-education.jpg";
-import med from "@/assets/cause-medical.jpg";
-import wat from "@/assets/cause-water.jpg";
-import wom from "@/assets/cause-women.jpg";
-import com from "@/assets/cause-community.jpg";
+import { feedingPhotos, masjidPhotos, qurbanPhotos } from "@/data/photos";
+
+const food = feedingPhotos[0];
+const edu = feedingPhotos[1];
+const med = feedingPhotos[2];
+const wat = masjidPhotos[0];
+const wom = qurbanPhotos[0];
+const com = masjidPhotos[1];
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
