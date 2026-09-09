@@ -1,32 +1,20 @@
-import food from "@/assets/cause-food.jpg";
-import education from "@/assets/cause-education.jpg";
-import medical from "@/assets/cause-medical.jpg";
-import water from "@/assets/cause-water.jpg";
-import women from "@/assets/cause-women.jpg";
-import community from "@/assets/cause-community.jpg";
-import orphan from "@/assets/cause-orphan.jpg";
-import relief from "@/assets/cause-relief.jpg";
-import masjid0 from "@/assets/masjid-0.jpg.asset.json";
-import masjid1 from "@/assets/masjid-1.jpg.asset.json";
-import masjid2 from "@/assets/masjid-2.jpg.asset.json";
-import masjid4 from "@/assets/masjid-4.jpg.asset.json";
-import masjid5 from "@/assets/masjid-5.jpg.asset.json";
-import feed11 from "@/assets/feeding-11.jpg.asset.json";
-import feed12 from "@/assets/feeding-12.jpg";
-import feed13 from "@/assets/feeding-13.jpg";
-import feed14 from "@/assets/feeding-14.jpg";
-import feed15 from "@/assets/feeding-15.jpg";
+import { feedingPhotos, masjidPhotos, qurbanPhotos } from "@/data/photos";
 
-import qurban16 from "@/assets/qurban-16.jpg.asset.json";
-import qurban17 from "@/assets/qurban-17.jpg.asset.json";
-import qurban18 from "@/assets/qurban-18.jpg.asset.json";
-import qurban19 from "@/assets/qurban-19.jpg.asset.json";
+const masjidMain = masjidPhotos[0];
+const masjidGallery = masjidPhotos.slice(1, 5);
 
-const masjidMain = masjid4.url;
-const masjidGallery = [masjid5.url, masjid0.url, masjid1.url, masjid2.url];
+const feedingImgs = feedingPhotos;
+const qurbanImgs = qurbanPhotos;
 
-const feedingImgs = [feed13, feed11.url, feed12, feed14, feed15];
-const qurbanImgs = [qurban16, qurban19, qurban17, qurban18].map((a) => a.url);
+const food = feedingPhotos[0];
+const education = feedingPhotos[1];
+const medical = feedingPhotos[2];
+const water = masjidPhotos[5];
+const women = qurbanPhotos[1];
+const community = masjidPhotos[2];
+const orphan = feedingPhotos[3];
+const relief = feedingPhotos[4];
+
 
 
 export type Cause = {
