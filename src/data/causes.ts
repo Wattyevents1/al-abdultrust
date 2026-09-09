@@ -12,10 +12,11 @@ import masjid2 from "@/assets/masjid-2.jpg.asset.json";
 import masjid4 from "@/assets/masjid-4.jpg.asset.json";
 import masjid5 from "@/assets/masjid-5.jpg.asset.json";
 import feed11 from "@/assets/feeding-11.jpg.asset.json";
-import feed12 from "@/assets/feeding-12.jpg.asset.json";
-import feed13 from "@/assets/feeding-13.jpg.asset.json";
-import feed14 from "@/assets/feeding-14.jpg.asset.json";
-import feed15 from "@/assets/feeding-15.jpg.asset.json";
+import feed12 from "@/assets/feeding-12.jpg";
+import feed13 from "@/assets/feeding-13.jpg";
+import feed14 from "@/assets/feeding-14.jpg";
+import feed15 from "@/assets/feeding-15.jpg";
+
 import qurban16 from "@/assets/qurban-16.jpg.asset.json";
 import qurban17 from "@/assets/qurban-17.jpg.asset.json";
 import qurban18 from "@/assets/qurban-18.jpg.asset.json";
