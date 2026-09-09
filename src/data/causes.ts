@@ -90,7 +90,7 @@ export const causes: Cause[] = [
     title: "Ramadan Iftar Project",
     category: "Ramadan",
     description: "During the blessed month of Ramadan, we serve hot, nutritious iftar meals to fasting families, orphans, widows, refugees and the elderly across our communities. We also distribute Ramadan food parcels containing rice, flour, oil, dates, sugar and other essentials to last a family the full month. Your donation feeds the fasting and earns the reward of their fast, without diminishing theirs.",
-    image: food,
+    image: feedingImgs[0],
     raised: 32500,
     goal: 60000,
     highlights: [
@@ -104,14 +104,14 @@ export const causes: Cause[] = [
       { q: "What goes in a Ramadan food parcel?", a: "Staples such as rice, flour, lentils, oil, sugar, dates, tea and milk powder, calibrated to feed a family of 5 to 7 for the full month." },
       { q: "Can I donate before Ramadan?", a: "Yes, early donations help us bulk-purchase and pre-position parcels, which makes every pound go further." },
     ],
-    gallery: [food, relief, community, orphan],
+    gallery: feedingImgs.slice(1),
   },
   {
     slug: "qurban-sadaq",
     title: "Qurban & Sadaqah",
     category: "Udhiyah",
     description: "Fulfil your Qurban (Udhiyah) obligation during Eid al-Adha by sponsoring the slaughter of a sheep, goat, cow or camel share. The fresh meat is distributed to orphans, widows, refugees and the poorest families, many of whom only taste meat during Eid. We handle every step from purchase to humane slaughter to distribution, and send you confirmation once your Qurban is complete.",
-    image: relief,
+    image: qurbanImgs[0],
     raised: 25800,
     goal: 50000,
     highlights: [
@@ -125,7 +125,7 @@ export const causes: Cause[] = [
       { q: "How do you ensure it is Sharia-compliant?", a: "Trained, certified butchers carry out Dhabihah slaughter under scholarly supervision in each country." },
       { q: "Will I get confirmation?", a: "Yes, you receive an email confirmation, and where possible photos, once your Qurban is completed." },
     ],
-    gallery: [relief, food, community, orphan],
+    gallery: qurbanImgs.slice(1),
   },
   {
     slug: "mosque-construction",
@@ -216,7 +216,7 @@ export const causes: Cause[] = [
     title: "Food Provision & Urgent Appeals",
     category: "Emergency Relief",
     description: "We respond rapidly to famines, floods, earthquakes and conflict zones with emergency food parcels, hot meals, clean water, blankets and medical aid. Our food provision programme also delivers monthly grocery packs year-round to widows, the elderly and food-insecure families. When disaster strikes, your donation puts food in hungry hands within days.",
-    image: relief,
+    image: feedingImgs[2],
     raised: 47600,
     goal: 90000,
     highlights: [
@@ -230,6 +230,6 @@ export const causes: Cause[] = [
       { q: "How do you choose who receives parcels?", a: "Local partners identify the most vulnerable, widows, elderly, disabled and displaced families, and we verify on the ground." },
       { q: "Can my donation go to a specific crisis?", a: "Yes, when an urgent appeal is active, you can ring-fence your gift to that response." },
     ],
-    gallery: [relief, food, medical, women],
+    gallery: [feedingImgs[3], feedingImgs[4], feedingImgs[1], relief],
   },
 ];
