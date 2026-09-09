@@ -124,30 +124,64 @@ function CausesPage() {
             </Card>
           </aside>
 
-          {/* Causes list */}
+          {/* Projects list */}
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
             {causes.map(c => {
-              const pct = Math.round((c.raised / c.goal) * 100);
+              const open = expanded === c.slug;
               return (
-                <Card key={c.slug} className="overflow-hidden p-0 hover:shadow-[var(--shadow-elegant)] transition group">
+                <Card key={c.slug} className="overflow-hidden p-0 hover:shadow-[var(--shadow-elegant)] transition group self-start">
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img src={c.image} alt={c.title} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition duration-500" />
                     <span className="absolute top-3 left-3 rounded-full bg-white/95 px-3 py-1 text-[11px] font-semibold text-primary">{c.category}</span>
                   </div>
                   <div className="p-6">
                     <h3 className="font-display text-xl font-bold text-primary">{c.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{c.description}</p>
-                    <Progress value={pct} className="mt-4 h-2" />
-                    <div className="mt-2 flex justify-between text-xs text-muted-foreground">
-                      <span><strong className="text-primary">${c.raised.toLocaleString()}</strong> raised</span>
-                      <span>{pct}% of ${c.goal.toLocaleString()}</span>
-                    </div>
-                    <div className="mt-4 grid grid-cols-2 gap-2">
-                      <Button asChild variant="outline" className="rounded-full">
-                        <Link to="/causes/$slug" params={{ slug: c.slug }}>Learn more</Link>
+                    <p className={`mt-2 text-sm text-muted-foreground ${open ? "" : "line-clamp-4"}`}>{c.description}</p>
+
+                    {open && (
+                      <div className="mt-5 space-y-5">
+                        <div className="grid grid-cols-2 gap-3">
+                          {c.highlights.map(h => (
+                            <div key={h.label} className="rounded-xl bg-secondary p-3">
+                              <div className="font-display text-lg font-bold text-primary">{h.stat}</div>
+                              <div className="text-[11px] text-muted-foreground">{h.label}</div>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="space-y-3">
+                          {c.faqs.map(f => (
+                            <div key={f.q}>
+                              <p className="text-sm font-semibold text-primary">{f.q}</p>
+                              <p className="mt-1 text-sm text-muted-foreground">{f.a}</p>
+                            </div>
+                          ))}
+                        </div>
+                        {c.gallery.length > 0 && (
+                          <div className="grid grid-cols-3 gap-2">
+                            {c.gallery.slice(0, 3).map((g, i) => (
+                              <img key={i} src={g} alt={`${c.title} photo ${i + 1}`} loading="lazy" className="aspect-square w-full rounded-lg object-cover" />
+                            ))}
+                          </div>
+                        )}
+                        <Link to="/causes/$slug" params={{ slug: c.slug }} className="inline-block text-sm font-semibold text-primary underline underline-offset-4">
+                          Open full project page
+                        </Link>
+                      </div>
+                    )}
+
+                    <div className="mt-5 grid grid-cols-2 gap-2">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        className="rounded-full"
+                        aria-expanded={open}
+                        onClick={() => setExpanded(open ? null : c.slug)}
+                      >
+                        {open ? "Show less" : "More details"}
+                        <ChevronDown className={`ml-1 h-4 w-4 transition ${open ? "rotate-180" : ""}`} />
                       </Button>
                       <Button asChild className="rounded-full" style={{ background: "var(--warm)", color: "var(--warm-foreground)" }}>
-                        <Link to="/causes">Donate</Link>
+                        <Link to="/causes" hash="donate">Donate</Link>
                       </Button>
                     </div>
                   </div>
