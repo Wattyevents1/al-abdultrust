@@ -127,7 +127,7 @@ function HomePage() {
             <div className="grid grid-cols-2 gap-10 lg:grid-cols-4 lg:gap-12">
               {stats.map((s) => (
                 <div key={s.label} className="border-l border-primary-foreground/20 pl-5 sm:pl-6">
-                  <span className="block font-display text-4xl font-bold sm:text-5xl">
+                  <span className="block font-display text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
                     <Counter end={s.value} suffix={s.suffix} />
                   </span>
                   <span className="mt-2 block text-[0.7rem] uppercase tracking-[0.2em] text-primary-foreground/70">
