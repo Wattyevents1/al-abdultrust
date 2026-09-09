@@ -37,4 +37,4 @@ export const feedingPhotos = [feed13, feed11.url, feed12, feed14, feed15];
 
 export const qurbanPhotos = [qurban16.url, qurban19.url, qurban17.url, qurban18.url];
 
-export const allPhotos = [...feedingPhotos, ...masjidPhotos, ...qurbanPhotos];
+export const allPhotos = [...waterPhotos, ...feedingPhotos, ...masjidPhotos, ...qurbanPhotos];
