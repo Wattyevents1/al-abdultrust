@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
-import { causes } from "@/data/causes";
+import type { Cause } from "@/data/causes";
+import { mergeCauses } from "@/lib/merge-causes";
+import { getCauseOverrides } from "@/lib/content.functions";
 import { Card } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -14,6 +16,10 @@ import { toast } from "sonner";
 import { Label } from "@/components/ui/label";
 
 export const Route = createFileRoute("/causes")({
+  loader: async () => {
+    const { overrides } = await getCauseOverrides();
+    return { causes: mergeCauses(overrides) };
+  },
   head: () => ({
     meta: [
       { title: "Projects & Donate | Al-Abdul Trust Charity Organisation" },
@@ -28,6 +34,7 @@ export const Route = createFileRoute("/causes")({
 const presets = [25, 50, 100, 250];
 
 function CausesPage() {
+  const { causes } = Route.useLoaderData() as { causes: Cause[] };
   const [amount, setAmount] = useState(50);
   const [recurring, setRecurring] = useState(false);
   const [currency, setCurrency] = useState("USD");
