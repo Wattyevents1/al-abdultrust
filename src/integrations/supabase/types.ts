@@ -14,6 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      cause_overrides: {
+        Row: {
+          category: string | null
+          created_at: string
+          description: string | null
+          faqs: Json | null
+          gallery: Json | null
+          highlights: Json | null
+          image: string | null
+          slug: string
+          title: string | null
+          updated_at: string
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          faqs?: Json | null
+          gallery?: Json | null
+          highlights?: Json | null
+          image?: string | null
+          slug: string
+          title?: string | null
+          updated_at?: string
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          faqs?: Json | null
+          gallery?: Json | null
+          highlights?: Json | null
+          image?: string | null
+          slug?: string
+          title?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       donations: {
         Row: {
           amount: number

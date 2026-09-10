@@ -1,16 +1,20 @@
 import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { causes, type Cause } from "@/data/causes";
+import { type Cause } from "@/data/causes";
+import { mergeCauses } from "@/lib/merge-causes";
+import { getCauseOverrides } from "@/lib/content.functions";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowLeft, Heart, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/causes/$slug")({
-  loader: ({ params }: { params: { slug: string } }) => {
-    const cause = causes.find((c) => c.slug === params.slug);
+  loader: async ({ params }: { params: { slug: string } }) => {
+    const { overrides } = await getCauseOverrides();
+    const all = mergeCauses(overrides);
+    const cause = all.find((c) => c.slug === params.slug);
     if (!cause) throw notFound();
-    return { cause };
+    return { cause, related: all.filter((c) => c.slug !== params.slug).slice(0, 3) };
   },
   head: ({ loaderData }) => ({
     meta: loaderData
@@ -49,8 +53,7 @@ export const Route = createFileRoute("/causes/$slug")({
 });
 
 function CauseDetailPage() {
-  const { cause } = Route.useLoaderData() as { cause: Cause };
-  const related = causes.filter((c) => c.slug !== cause.slug).slice(0, 3);
+  const { cause, related } = Route.useLoaderData() as { cause: Cause; related: Cause[] };
 
   return (
     <SiteLayout>
