@@ -3,10 +3,10 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { causes } from "@/data/causes";
 import { Card } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Heart } from "lucide-react";
+import { Heart, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { initiateDonation } from "@/lib/donations.functions";
@@ -35,6 +35,7 @@ function CausesPage() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [expanded, setExpanded] = useState<string | null>(null);
   const initiate = useServerFn(initiateDonation);
 
   async function onDonate(e: React.FormEvent) {
