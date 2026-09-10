@@ -68,7 +68,6 @@ const news = [
   { title: "Emergency food response after flooding", date: "Jan 2026", excerpt: "Food convoys reach displaced families within days." },
 ];
 
-const partners = ["UNICEF", "Red Cross", "WHO", "Oxfam", "USAID", "Save the Children", "World Vision", "Care"];
 
 function HomePage() {
   const byslug = (s: string) => causes.find((c) => c.slug === s)!;
@@ -209,17 +208,6 @@ function HomePage() {
           </div>
         </Reveal>
 
-        {/* PARTNERS */}
-        <section className="overflow-hidden py-16">
-          <p className="eyebrow mb-8 text-center text-muted-foreground">Working alongside</p>
-          <div className="relative overflow-hidden">
-            <div className="flex gap-14 whitespace-nowrap" style={{ animation: "var(--animate-marquee)" }}>
-              {[...partners, ...partners].map((p, i) => (
-                <span key={i} className="font-display text-2xl tracking-wide text-muted-foreground/60">{p}</span>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* NEWS */}
         <section className="px-6 lg:px-16 py-24">
