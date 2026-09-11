@@ -97,6 +97,17 @@ function AdminPage() {
       </header>
 
       <main className="container-narrow py-10 space-y-8">
+        <Tabs defaultValue="donations" className="space-y-8">
+          <TabsList>
+            <TabsTrigger value="donations">Donations</TabsTrigger>
+            <TabsTrigger value="projects">Projects</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="projects">
+            <ProjectEditor />
+          </TabsContent>
+
+          <TabsContent value="donations" className="space-y-8">
         <div>
           <h1 className="font-display text-3xl font-bold text-primary">Donations dashboard</h1>
           <p className="text-sm text-muted-foreground">Live Pesapal transactions for Al-Abdul Trust.</p>
