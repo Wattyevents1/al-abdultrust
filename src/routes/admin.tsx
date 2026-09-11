@@ -5,6 +5,8 @@ import { useServerFn } from "@tanstack/react-start";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ProjectEditor } from "@/components/admin/ProjectEditor";
 import { supabase } from "@/integrations/supabase/client";
 import { listDonations, checkAdmin } from "@/lib/donations.functions";
 import { Logo } from "@/components/site/Logo";
