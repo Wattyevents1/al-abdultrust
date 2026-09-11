@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VolunteerRouteImport } from './routes/volunteer'
 import { Route as StatsRouteImport } from './routes/stats'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as EventsRouteImport } from './routes/events'
@@ -33,6 +34,11 @@ const VolunteerRoute = VolunteerRouteImport.update({
 const StatsRoute = StatsRouteImport.update({
   id: '/stats',
   path: '/stats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LegalRoute = LegalRouteImport.update({
@@ -112,6 +118,7 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
   '/legal': typeof LegalRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/stats': typeof StatsRoute
   '/volunteer': typeof VolunteerRoute
   '/causes/$slug': typeof CausesSlugRoute
@@ -129,6 +136,7 @@ export interface FileRoutesByTo {
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
   '/legal': typeof LegalRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/stats': typeof StatsRoute
   '/volunteer': typeof VolunteerRoute
   '/causes/$slug': typeof CausesSlugRoute
@@ -147,6 +155,7 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
   '/legal': typeof LegalRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/stats': typeof StatsRoute
   '/volunteer': typeof VolunteerRoute
   '/causes/$slug': typeof CausesSlugRoute
@@ -166,6 +175,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/gallery'
     | '/legal'
+    | '/reset-password'
     | '/stats'
     | '/volunteer'
     | '/causes/$slug'
@@ -183,6 +193,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/gallery'
     | '/legal'
+    | '/reset-password'
     | '/stats'
     | '/volunteer'
     | '/causes/$slug'
@@ -200,6 +211,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/gallery'
     | '/legal'
+    | '/reset-password'
     | '/stats'
     | '/volunteer'
     | '/causes/$slug'
@@ -218,6 +230,7 @@ export interface RootRouteChildren {
   EventsRoute: typeof EventsRoute
   GalleryRoute: typeof GalleryRoute
   LegalRoute: typeof LegalRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
   StatsRoute: typeof StatsRoute
   VolunteerRoute: typeof VolunteerRoute
   DonateCallbackRoute: typeof DonateCallbackRoute
@@ -238,6 +251,13 @@ declare module '@tanstack/react-router' {
       path: '/stats'
       fullPath: '/stats'
       preLoaderRoute: typeof StatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/legal': {
@@ -356,6 +376,7 @@ const rootRouteChildren: RootRouteChildren = {
   EventsRoute: EventsRoute,
   GalleryRoute: GalleryRoute,
   LegalRoute: LegalRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
   StatsRoute: StatsRoute,
   VolunteerRoute: VolunteerRoute,
   DonateCallbackRoute: DonateCallbackRoute,
