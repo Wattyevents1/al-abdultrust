@@ -20,19 +20,21 @@ export const Route = createFileRoute("/blog")({
       { title: "Blog & News | Al-Abdul Trust Charity Organisation" },
       { name: "description", content: "Stories from the field, project updates, and reflections on humanitarian work." },
       { property: "og:title", content: "Al-Abdul Trust Blog" },
-      { property: "og:description", content: "Voices from the communities we serve." },
+      { property: "og:description", content: "Stories from Mbale, Sironko and the communities we serve across Uganda." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Blog,
 });
 
 const posts = [
-  { id: 1, title: "How a single well changed Loiyangalani forever", category: "Water", img: wat, date: "Mar 12, 2026", excerpt: "When Al-Abdul Trust drilled its 300th well last month, it didn't just bring water, it rewrote a generation's future." },
-  { id: 2, title: "Inside our girls' scholarship program", category: "Education", img: edu, date: "Mar 04, 2026", excerpt: "2,500 girls are now in school thanks to donors like you. Here's what's next." },
-  { id: 3, title: "Field notes: Mobile clinics in Sudan", category: "Healthcare", img: med, date: "Feb 26, 2026", excerpt: "A week with our medical team responding to displaced families in the Darfur corridor." },
-  { id: 4, title: "Women who started 100 businesses", category: "Empowerment", img: wom, date: "Feb 18, 2026", excerpt: "How microloans of just $200 are creating ripple effects across rural Senegal." },
-  { id: 5, title: "Feeding 12,000 families this winter", category: "Food", img: food, date: "Feb 02, 2026", excerpt: "Our largest food distribution to date, made possible by 4,000 volunteers." },
-  { id: 6, title: "Building together: a village's story", category: "Community", img: com, date: "Jan 21, 2026", excerpt: "A new community center opened in Mwanza, designed and built by neighbors." },
+  { id: 1, title: "Bringing clean water closer in Sironko", category: "Water", img: wat, date: "Mar 12, 2026", excerpt: "A look at how safer local water points can reduce long daily walks for rural families." },
+  { id: 2, title: "Supporting pupils in Mbale", category: "Education", img: edu, date: "Mar 04, 2026", excerpt: "School meals and learning materials help children stay focused and continue their education." },
+  { id: 3, title: "Healthcare outreach in Sironko", category: "Healthcare", img: med, date: "Feb 26, 2026", excerpt: "Community outreach helps connect rural families with basic health information and support." },
+  { id: 4, title: "Women building livelihoods in Mbale", category: "Empowerment", img: wom, date: "Feb 18, 2026", excerpt: "Practical support gives women more ways to strengthen household income and independence." },
+  { id: 5, title: "Sharing food with families in Mbale", category: "Food", img: food, date: "Feb 02, 2026", excerpt: "Food parcels and shared meals offer timely support while protecting each family's dignity." },
+  { id: 6, title: "Building together in Sironko", category: "Community", img: com, date: "Jan 21, 2026", excerpt: "Local participation keeps community projects useful, trusted and cared for over time." },
 ];
 
 const categories = ["All", "Water", "Education", "Healthcare", "Empowerment", "Food", "Community"];

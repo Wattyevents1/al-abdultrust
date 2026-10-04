@@ -14,9 +14,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Al-Abdul Trust CHARITY ORGANISATION | Serving Humanity in Uganda" },
-      { name: "description", content: "Al-Abdul Trust is a registered Ugandan charity building water wells, orphanages and schools, and feeding families in need. Donate or volunteer today." },
+      { name: "description", content: "Al-Abdul Trust is a registered Ugandan charity supporting families in Mbale, Sironko and across Uganda through water, education and food projects." },
       { property: "og:title", content: "Al-Abdul Trust CHARITY ORGANISATION" },
-      { property: "og:description", content: "Water wells, orphan care, schools and food relief across Uganda. Serving humanity, together." },
+      { property: "og:description", content: "Water wells, orphan care, schools and food relief in Mbale, Sironko and communities across Uganda." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -36,7 +36,7 @@ const stories = [
     slug: "water-wells",
     eyebrow: "Safe water access",
     title: ["Deep wells,", "brighter futures."],
-    body: "Our boreholes bring clean water straight into the heart of a village, cutting waterborne illness, easing the daily burden on mothers, and freeing girls to sit in a classroom instead of walking for miles.",
+    body: "In communities such as Sironko, our boreholes bring clean water closer to families, reducing long walks and helping children spend more time in school.",
     cta: "Explore water projects",
   },
   {
@@ -63,9 +63,9 @@ const stories = [
 ] as const;
 
 const news = [
-  { title: "300th well opened in the northern districts", date: "Mar 2026", excerpt: "A new borehole brings clean water to 4,000 people." },
-  { title: "Annual fundraiser supports 2,500 pupils", date: "Feb 2026", excerpt: "Generous donors funded school fees and materials." },
-  { title: "Emergency food response after flooding", date: "Jan 2026", excerpt: "Food convoys reach displaced families within days." },
+  { title: "Clean water support in Sironko", date: "Mar 2026", excerpt: "Local water projects bring safer water closer to rural families." },
+  { title: "School support reaches Mbale pupils", date: "Feb 2026", excerpt: "Donor support provides learning materials and school meals." },
+  { title: "Food relief for families in Mbale", date: "Jan 2026", excerpt: "Food parcels and prepared meals reach families facing hardship." },
 ];
 
 
@@ -87,7 +87,7 @@ function HomePage() {
                 <br className="hidden sm:block" /> in Uganda.
               </h1>
               <p className="mt-8 max-w-xl text-lg sm:text-xl lg:text-2xl leading-relaxed text-foreground/75">
-                Al-Abdul Trust is a Ugandan charity dedicated to sustainable relief, clean water, orphan care, schools and food for families who need it most.
+                Al-Abdul Trust is a Ugandan charity supporting families in Mbale, Sironko and beyond through clean water, orphan care, schools and food relief.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Button asChild size="lg" className="h-14 rounded-full bg-primary px-9 text-base font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 hover:bg-primary/90">
@@ -203,7 +203,7 @@ function HomePage() {
             </blockquote>
             <div className="mt-10 flex items-center gap-4">
               <div className="h-[2px] w-12 bg-warm" />
-              <p className="font-display text-sm font-bold uppercase tracking-wider">Community elder, Luwero District</p>
+              <p className="font-display text-sm font-bold uppercase tracking-wider">Community elder, Sironko District</p>
             </div>
           </div>
         </Reveal>
