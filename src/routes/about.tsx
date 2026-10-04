@@ -11,7 +11,9 @@ export const Route = createFileRoute("/about")({
       { title: "About | Al-Abdul Trust CHARITY ORGANISATION" },
       { name: "description", content: "Our story, mission and the people behind Al-Abdul Trust CHARITY ORGANISATION." },
       { property: "og:title", content: "About Al-Abdul Trust CHARITY ORGANISATION" },
-      { property: "og:description", content: "A movement of service and trust since 2009." },
+      { property: "og:description", content: "Learn how Al-Abdul Trust serves communities in Mbale, Sironko and across Uganda." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: About,
@@ -32,9 +34,9 @@ const team = [
 ];
 
 const milestones = [
-  { year: "2009", title: "Foundation born", text: "Started with a single school feeding program in Kampala, Uganda." },
-  { year: "2013", title: "First clinic", text: "Opened our first mobile health clinic in rural Uganda." },
-  { year: "2017", title: "100 villages", text: "Reached 100 communities across Uganda and neighboring regions." },
+  { year: "2009", title: "Foundation born", text: "Started by serving children and families in eastern Uganda." },
+  { year: "2013", title: "Community outreach", text: "Expanded food, education and health support in Mbale." },
+  { year: "2017", title: "Rural partnerships", text: "Deepened community led work with families in Sironko District." },
   { year: "2021", title: "Clean water scale", text: "Built 250 wells, serving over 800,000 people." },
   { year: "2025", title: "Global movement", text: "40+ volunteers worldwide, $40M+ raised for impact." },
 ];
@@ -42,14 +44,14 @@ const milestones = [
 function About() {
   return (
     <SiteLayout>
-      <PageHero eyebrow="Our Story" title="A movement built on trust and service" subtitle="Since 2009 we've walked alongside communities across Africa, listening, building, and serving." />
+      <PageHero eyebrow="Our Story" title="A movement built on trust and service" subtitle="Our work is rooted in Uganda, including communities in Mbale and Sironko, where we listen, build and serve." />
 
       <section className="py-24">
         <div className="container-narrow grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold text-primary">From a single meal to a movement</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Al-Abdul Trust CHARITY ORGANISATION began with one mother handing out meals after school in a Kampala suburb. Five years later we operate in 2 countries, but our principle hasn't changed: meet people where they are, with what they need, and treat them like family.
+              Al-Abdul Trust CHARITY ORGANISATION grew from a simple commitment to support children and families in eastern Uganda. Our work in Mbale and Sironko reflects the same principle: meet people where they are, respond to what they need and treat them like family.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               We focus on six pillars: food security, education, healthcare, clean water, women's empowerment, and emergency relief. Every dollar is tracked. Every program is co-designed with the communities we serve.

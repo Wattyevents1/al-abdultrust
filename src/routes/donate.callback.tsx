@@ -28,7 +28,7 @@ export const Route = createFileRoute("/donate/callback")({
       <SiteLayout>
         <div className="container-narrow py-32 text-center">
           <h1 className="font-display text-3xl font-bold text-primary">Something went wrong</h1>
-          <p className="mt-2 text-muted-foreground">{error.message}</p>
+          <p className="mt-2 text-muted-foreground">{error instanceof Error ? error.message : "Please try again."}</p>
           <Button onClick={() => { router.invalidate(); reset(); }} className="mt-6 rounded-full">Try again</Button>
         </div>
       </SiteLayout>
